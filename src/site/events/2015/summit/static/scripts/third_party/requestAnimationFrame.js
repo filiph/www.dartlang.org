@@ -1,4 +1,3 @@
-/*! For licensing see /devsummit/LICENSE */
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
