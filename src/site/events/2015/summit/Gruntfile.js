@@ -68,39 +68,105 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src/',
-          src: [
-            'index.html'
-          ],
+          src: 'index.html',
           dest: 'get-involved/'
         },{
           expand: true,
           cwd: 'src/',
-          src: [
-            'index.html'
-          ],
+          src: 'index.html',
           dest: 'attendee-information/'
         },{
           expand: true,
           cwd: 'src/',
-          src: [
-            'index.html'
-          ],
+          src: 'index.html',
           dest: 'about-dart-summit/'
         },{
           expand: true,
           cwd: 'src/',
-          src: [
-            'index.html'
-          ],
+          src: 'index.html',
           dest: 'sessions/'
         },{
           expand: true,
           cwd: 'src/',
-          src: [
-            'index.html'
-          ],
+          src: 'index.html',
           dest: 'schedule/'
-        }]
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/async-in-dart/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/building-an-awesome-ecosystem/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/building-production-dart-apps-with-a-pure-open-source-workflow/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/dart-at-60fps/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/dart-for-internet-of-things/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/dart-for-mobile/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/debugging-and-profiling-dart-programs-with-observatory/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/getting-the-most-out-of-dart2js/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/google-fiber-and-dart/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/keynote/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/keynote-ads-and-dart/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/migrating-trustwaves-large-customer-portal-to-dart/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/sky/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/space-frugal-reflection/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: 'index.html',
+          dest: 'sessions/switching-to-dart/'
+        }
+        ]
       }
     },
 
