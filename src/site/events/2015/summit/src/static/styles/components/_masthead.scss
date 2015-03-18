@@ -68,7 +68,7 @@
   .masthead {
     height: 396px;
     position: relative;
-    background: #493B8A;
+    background: $color-secondary;
     margin-bottom: -135px;
   }
 
@@ -109,19 +109,21 @@
 
   .masthead__container:after {
     content: '';
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     display: block;
     left: 32px;
     top: 102px;
-    background: url('../images/chrome-icon.jpg') center center no-repeat;
-    background-size: 100px 100px;
+    background: url('../images/dart-logo.png') 12px 12px no-repeat;
+    background-size: 90px 90px;
+    border-radius: 80px;
+    background-color: white;
   }
 }
 
 @media (min-resolution: 2.0dppx), (-webkit-min-device-pixel-ratio: 2), (min-width: 960px) {
   .masthead__container:after {
-    background-image: url('../images/chrome-icon@2x.jpg');
+    background-image: url('../images/dart-logo.png');
   }
 }
