@@ -76,6 +76,13 @@ module.exports = function(grunt) {
           src: [
             'index.html'
           ],
+          dest: 'sessions/'
+        },{
+          expand: true,
+          cwd: 'src/',
+          src: [
+            'index.html'
+          ],
           dest: 'schedule/'
         }]
       }
