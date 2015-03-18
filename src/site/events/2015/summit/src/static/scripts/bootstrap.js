@@ -30,8 +30,8 @@ CDS.History.init();
 
 if ('serviceWorker' in navigator) {
 
-  navigator.serviceWorker.register('/devsummit/sw.js', {
-    scope: '/devsummit/'
+  navigator.serviceWorker.register('/events/2015/summit/sw.js', {
+    scope: '/events/2015/summit/'
   }).then(function(registration) {
 
     var newServiceWorkerAvailableMessage =

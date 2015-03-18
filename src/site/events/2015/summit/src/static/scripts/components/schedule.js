@@ -19,7 +19,7 @@ CDS.Schedule = (function() {
   "use strict";
 
   var dPR = window.devicePixelRatio;
-  var card = CDS.Cards['/devsummit/schedule/'];
+  var card = CDS.Cards['/events/2015/summit/schedule/'];
   var rootElement = card.getRootElement();
   var container = rootElement.querySelector('.schedule__overview-container');
   var canvas = rootElement.querySelector('canvas');

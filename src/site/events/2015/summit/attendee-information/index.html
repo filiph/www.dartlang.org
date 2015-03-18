@@ -1,3 +1,20 @@
+<!--
+
+Copyright 2014 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
 <!doctype html>
 <html itemscope itemtype="http://schema.org/Event">
   <head>
@@ -12,6 +29,8 @@
     <meta itemprop="image" content="https://www.dartlang.org/events/2015/summit/static/images/masthead-1.jpg">
     <meta itemprop="image" content="https://www.dartlang.org/events/2015/summit/static/images/dart-logo.png">
     <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/devsummit/images/chrome-touch-icon-192x192.png">
+    <meta id="theme-color" name="theme-color" content="#362A6C">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,8 +45,10 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/events/2015/summit/static/styles/cds.min.css">
 
+    <link rel="manifest" href="/devsummit/manifest.json">
+
   </head>
-  <body>
+  <body  class="{{ deeplink_class }}">
 
     <header class="masthead ">
       <div class="masthead__color-block"></div>
@@ -267,8 +288,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/keynote/" class="card__see-more" tabindex="2">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="3">Back</a>
+                    <a href="/events/2015/summit/sessions/keynote/" class="card__see-more" tabindex="2">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="3">Back</a>
 
                     <div class="card__title">Keynote <span class="card__subtitle">09:00 - 09:30</span></div>
                     <div class="card__logo"></div>
@@ -299,8 +320,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/wicked-fast/" class="card__see-more" tabindex="4">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="5">Back</a>
+                    <a href="/events/2015/summit/sessions/wicked-fast/" class="card__see-more" tabindex="4">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="5">Back</a>
 
                     <div class="card__title">Wicked Fast (Performance investments) <span class="card__subtitle">09:30 - 09:50</span></div>
                     <div class="card__logo"></div>
@@ -330,8 +351,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/making-web-apps-appy/" class="card__see-more" tabindex="6">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="7">Back</a>
+                    <a href="/events/2015/summit/sessions/making-web-apps-appy/" class="card__see-more" tabindex="6">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="7">Back</a>
 
                     <div class="card__title">Making Web Apps Appy <span class="card__subtitle">09:50 - 10:40</span></div>
                     <div class="card__logo"></div>
@@ -363,8 +384,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/asking-for-super-powers-chromes-permission-model/" class="card__see-more" tabindex="8">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="9">Back</a>
+                    <a href="/events/2015/summit/sessions/asking-for-super-powers-chromes-permission-model/" class="card__see-more" tabindex="8">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="9">Back</a>
 
                     <div class="card__title">Asking for superpowers: Chrome's permission model <span class="card__subtitle">10:40 - 11:00</span></div>
                     <div class="card__logo"></div>
@@ -396,8 +417,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/material-design-deconstructed/" class="card__see-more" tabindex="10">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="11">Back</a>
+                    <a href="/events/2015/summit/sessions/material-design-deconstructed/" class="card__see-more" tabindex="10">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="11">Back</a>
 
                     <div class="card__title">Material Design Deconstructed <span class="card__subtitle">11:30 - 12:00</span></div>
                     <div class="card__logo"></div>
@@ -429,8 +450,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/the-applied-science-of-runtime-performance/" class="card__see-more" tabindex="12">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="13">Back</a>
+                    <a href="/events/2015/summit/sessions/the-applied-science-of-runtime-performance/" class="card__see-more" tabindex="12">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="13">Back</a>
 
                     <div class="card__title">The Applied Science of Runtime Performance <span class="card__subtitle">12:00 - 12:30</span></div>
                     <div class="card__logo"></div>
@@ -465,8 +486,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/tls-all-the-things-security-with-performance/" class="card__see-more" tabindex="14">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="15">Back</a>
+                    <a href="/events/2015/summit/sessions/tls-all-the-things-security-with-performance/" class="card__see-more" tabindex="14">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="15">Back</a>
 
                     <div class="card__title">TLS All the Things! - Security with Performance <span class="card__subtitle">12:30 - 13:00</span></div>
                     <div class="card__logo"></div>
@@ -498,8 +519,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/easy-composition-and-reuse/" class="card__see-more" tabindex="16">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="17">Back</a>
+                    <a href="/events/2015/summit/sessions/easy-composition-and-reuse/" class="card__see-more" tabindex="16">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="17">Back</a>
 
                     <div class="card__title">Easy Composition and Reuse with Web Components <span class="card__subtitle">14:30 - 15:00</span></div>
                     <div class="card__logo"></div>
@@ -531,8 +552,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/polymer-state-of-the-union/" class="card__see-more" tabindex="18">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="19">Back</a>
+                    <a href="/events/2015/summit/sessions/polymer-state-of-the-union/" class="card__see-more" tabindex="18">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="19">Back</a>
 
                     <div class="card__title">Polymer: State of the Union <span class="card__subtitle">15:00 - 15:30</span></div>
                     <div class="card__logo"></div>
@@ -564,8 +585,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/lets-build-some-apps-with-polymer/" class="card__see-more" tabindex="20">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="21">Back</a>
+                    <a href="/events/2015/summit/sessions/lets-build-some-apps-with-polymer/" class="card__see-more" tabindex="20">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="21">Back</a>
 
                     <div class="card__title">Let's build some apps with Polymer! <span class="card__subtitle">15:30 - 16:00</span></div>
                     <div class="card__logo"></div>
@@ -597,8 +618,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/fundamentals-of-mobile-web-development/" class="card__see-more" tabindex="22">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="23">Back</a>
+                    <a href="/events/2015/summit/sessions/fundamentals-of-mobile-web-development/" class="card__see-more" tabindex="22">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="23">Back</a>
 
                     <div class="card__title">Fundamentals of Mobile Web Development <span class="card__subtitle">16:30 - 17:00</span></div>
                     <div class="card__logo"></div>
@@ -630,8 +651,8 @@
                 <div class="sessions__session-detail card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/closing-keynote/" class="card__see-more" tabindex="24">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="25">Back</a>
+                    <a href="/events/2015/summit/sessions/closing-keynote/" class="card__see-more" tabindex="24">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="25">Back</a>
 
                     <div class="card__title">Closing Keynote <span class="card__subtitle">17:00 - 17:15</span></div>
                     <div class="card__logo"></div>
@@ -667,8 +688,8 @@
                 <div class="sessions__session-detail sessions__session-detail--panel card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/web-components-and-polymer-panel/" class="card__see-more" tabindex="26">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="27">Back</a>
+                    <a href="/events/2015/summit/sessions/web-components-and-polymer-panel/" class="card__see-more" tabindex="26">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="27">Back</a>
 
                     <div class="card__title">Web Components and Polymer Panel <span class="card__subtitle">09:30 - 10:30</span></div>
                     <div class="card__logo"></div>
@@ -704,8 +725,8 @@
                 <div class="sessions__session-detail sessions__session-detail--panel card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/future-of-web-apps-panel/" class="card__see-more" tabindex="28">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="29">Back</a>
+                    <a href="/events/2015/summit/sessions/future-of-web-apps-panel/" class="card__see-more" tabindex="28">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="29">Back</a>
 
                     <div class="card__title">Future of Web Apps Panel <span class="card__subtitle">10:30 - 11:30</span></div>
                     <div class="card__logo"></div>
@@ -742,8 +763,8 @@
                 <div class="sessions__session-detail sessions__session-detail--panel card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/performance-panel/" class="card__see-more" tabindex="30">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="31">Back</a>
+                    <a href="/events/2015/summit/sessions/performance-panel/" class="card__see-more" tabindex="30">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="31">Back</a>
 
                     <div class="card__title">Performance Panel <span class="card__subtitle">12:00 - 13:00</span></div>
                     <div class="card__logo"></div>
@@ -780,8 +801,8 @@
                 <div class="sessions__session-detail sessions__session-detail--panel card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/material-design-panel/" class="card__see-more" tabindex="32">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="33">Back</a>
+                    <a href="/events/2015/summit/sessions/material-design-panel/" class="card__see-more" tabindex="32">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="33">Back</a>
 
                     <div class="card__title">Material Design Panel <span class="card__subtitle">14:15 - 15:00</span></div>
                     <div class="card__logo"></div>
@@ -818,8 +839,8 @@
                 <div class="sessions__session-detail sessions__session-detail--panel card card--no-title-scale card--no-title-opacity-during-scroll">
 
                   <div class="card__container">
-                    <a href="/devsummit/sessions/chrome-leadership-panel/" class="card__see-more" tabindex="34">See more</a>
-                    <a href="/devsummit/sessions/" class="card__collapse-button" tabindex="35">Back</a>
+                    <a href="/events/2015/summit/sessions/chrome-leadership-panel/" class="card__see-more" tabindex="34">See more</a>
+                    <a href="/events/2015/summit/sessions/" class="card__collapse-button" tabindex="35">Back</a>
 
                     <div class="card__title">Chrome Leadership Panel <span class="card__subtitle">15:00 - 16:00</span></div>
                     <div class="card__logo"></div>
