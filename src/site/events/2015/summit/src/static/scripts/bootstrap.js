@@ -28,38 +28,39 @@ CDS.EventPublisher.add('load', function() {
 
 CDS.History.init();
 
-if ('serviceWorker' in navigator) {
+// Not yet. Will come back to this.
+// if ('serviceWorker' in navigator) {
 
-  navigator.serviceWorker.register('/events/2015/summit/sw.js', {
-    scope: '/events/2015/summit/'
-  }).then(function(registration) {
+//   navigator.serviceWorker.register('/events/2015/summit/sw.js', {
+//     scope: '/events/2015/summit/'
+//   }).then(function(registration) {
 
-    var newServiceWorkerAvailableMessage =
-        'A new version of this page is available. Please force-refresh.';
+//     var newServiceWorkerAvailableMessage =
+//         'A new version of this page is available. Please force-refresh.';
 
-    // If this fires we should check if there's a new Service Worker
-    // waiting to be activated. If so, ask the user to force refresh.
-    if (registration.waiting) {
-      CDS.Toaster.create(newServiceWorkerAvailableMessage);
-      return;
-    }
+//     // If this fires we should check if there's a new Service Worker
+//     // waiting to be activated. If so, ask the user to force refresh.
+//     if (registration.waiting) {
+//       CDS.Toaster.create(newServiceWorkerAvailableMessage);
+//       return;
+//     }
 
-    // We should also start tracking for any updates to the Service Worker.
-    registration.onupdatefound = function(event) {
+//     // We should also start tracking for any updates to the Service Worker.
+//     registration.onupdatefound = function(event) {
 
-      console.log("A new version has been found... Installing...");
+//       console.log("A new version has been found... Installing...");
 
-      // If an update is found the spec says that there is a new Service Worker
-      // installing, so we should wait for that to complete then show a
-      // notification to the user.
-      registration.installing.onstatechange = function(event) {
-        if (this.state === 'installed')
-          CDS.Toaster.create(newServiceWorkerAvailableMessage);
-        else
-          console.log("New Service Worker state: ", this.state);
-      };
-    };
-  }, function(err) {
-    console.log(err);
-  });
-}
+//       // If an update is found the spec says that there is a new Service Worker
+//       // installing, so we should wait for that to complete then show a
+//       // notification to the user.
+//       registration.installing.onstatechange = function(event) {
+//         if (this.state === 'installed')
+//           CDS.Toaster.create(newServiceWorkerAvailableMessage);
+//         else
+//           console.log("New Service Worker state: ", this.state);
+//       };
+//     };
+//   }, function(err) {
+//     console.log(err);
+//   });
+// }
