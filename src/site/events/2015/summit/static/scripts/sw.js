@@ -1,4 +1,3 @@
-/*! For licensing see /devsummit/LICENSE */
 /**
  * Copyright 2014 Google Inc. All rights reserved.
  *

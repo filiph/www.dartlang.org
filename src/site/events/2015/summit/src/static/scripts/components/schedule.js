@@ -55,52 +55,69 @@ CDS.Schedule = (function() {
   var BLUE = '#4A90E2';
 
   var days = [{
-    "Breakfast": [{
-      start: 8, duration: 1
+    "Registration": [{
+      start: 8.5, duration: 1
     }],
     "Keynote": [{
-      start: 9, duration: 0.5
-    },{
-      start: 17, duration: 0.25
+      start: 9.5, duration: 0.5
     }],
     "Sessions": [{
-      start: 9.5, duration: 1.5
+      start: 10, duration: 0.5
     }, {
-      start: 11.5, duration: 1.5
+      start: 11, duration: 1
     },{
-      start: 14.5, duration: 1.5
+      start: 12.5, duration: 0.5
     },{
-      start: 16.5, duration: 0.5
+      start: 14.5, duration: 1
+    }, {
+      start: 16.5, duration: 1
+    }],
+    "Interactive": [{
+      start: 12, duration: 0.5,
+    }, {
+      start: 15.5, duration: 0.5
     }],
     "Break": [{
-      start: 11, duration: 0.5
+      start: 10.5, duration: 0.5
     },{
       start: 13, duration: 1.5
     },{
       start: 16, duration: 0.5
     }],
+    "Lightning Talks": [{
+      start: 17.5, duration: 0.5
+    }],
     "After Party": [{
-      start: 17.25, duration: 4.75
+      start: 18, duration: 4
     }]
   },
   {
-    "Breakfast": [{
-      start: 8, duration: 1.5
+    "Registration": [{
+      start: 8.5, duration: 1
+    }],
+    "Keynote": [{
+      start: 9.5, duration: 0.5
     }],
     "Sessions": [{
-      start: 9.5, duration: 2
+      start: 10, duration: 0.5
+    }, {
+      start: 11, duration: 1
     },{
-      start: 12, duration: 1
+      start: 12.5, duration: 0.5
     },{
-      start: 14.25, duration: 1.75
+      start: 14.5, duration: 1
+    }, {
+      start: 16.5, duration: 1
     }],
-    "Breakout Discussion": [{
-      start: 16.5, duration: 1.5
+    "Interactive": [{
+      start: 12, duration: 0.5,
+    }, {
+      start: 15.5, duration: 0.5
     }],
     "Break": [{
-      start: 11.5, duration: 0.5
+      start: 10.5, duration: 0.5
     },{
-      start: 13, duration: 1.25
+      start: 13, duration: 1.5
     },{
       start: 16, duration: 0.5
     }]
@@ -210,15 +227,28 @@ CDS.Schedule = (function() {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
 
+    var crossedNoon = false;
+
     for (var r = 0; r <= range; r++) {
 
       x = r * step;
-      time = (timeRange.min + r) % 12;
+      time = (timeRange.min + r);
+
+      if (time >= 13) {
+        time = time - 12;
+      }
+
+      if (time % 1 == 0.5) {
+        time = (time - (time % 1)) + ':30';
+      }
 
       if (r === 0)
         time += 'AM';
-      else if (time === 0)
-        time = '12PM';
+      
+      if (!crossedNoon && (timeRange.min + r) >= 12) {
+        time += 'PM';
+        crossedNoon = true;
+      }
 
       ctx.beginPath();
       ctx.moveTo(x, 0);
@@ -226,7 +256,7 @@ CDS.Schedule = (function() {
       ctx.stroke();
       ctx.closePath();
 
-      ctx.font = '500 16px/1 Roboto';
+      ctx.font = '500 14px/1 Roboto';
       ctx.fillText(time, x, lineHeight + 5);
     }
     ctx.restore();
